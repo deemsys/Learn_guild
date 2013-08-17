@@ -1,13 +1,13 @@
 <?
 
-// Script for testing Sakai linktool. This is https://source.sakaiproject.org/svn/linktool/trunk/samples/linktool.php
+// Script for testing LearnGuild linktool. This is https://source.sakaiproject.org/svn/linktool/trunk/samples/linktool.php
 
 // Requires PEAR SOAP module, and php modules curl, openssl, zlib (for installing PEAR modules if required)
 
-// This script can be invoked from Sakai in a popup window (for example in a Melete unit)
+// This script can be invoked from LearnGuild in a popup window (for example in a Melete unit)
 // with a URL such as:
 //    https://sakai.domain/sakai-rutgers-linktool?site=SITEID&url=SCRIPTURL&param1=value1&param2=value2
-// where SITEID = Sakai Site ID of the site in which the URL is placed, SCRIPTURL = url of this script,
+// where SITEID = LearnGuild Site ID of the site in which the URL is placed, SCRIPTURL = url of this script,
 // param1 and param2 are optional application-specific parameters.
 
 // Adding PEAR to the include_path may be required depending on local php config
@@ -148,20 +148,20 @@ body{
 <div class="portletBody">
 
 <h2>Linktool Test</h2>
-This script is to test the functionality of the Sakai LinkTool from QA and other servers.
+This script is to test the functionality of the LearnGuild LinkTool from QA and other servers.
 
 <h3>Linktool Parameters</h3>
 <table class="listHier" cellspacing="0" border="0" summary="Parameters">
 <tbody>
 <tr><th>Parameter</th><th>Value</th><th>Description</th></tr>
-<tr><td>user</td><td><?=$euid?></td><td>Sakai enterprise id (eid)</td></tr>
-<tr><td>internaluser</td><td><?=$user?></td><td>Sakai internal id (userid)</td></tr>
-<tr><td>site</td><td><?=$site?></td><td>Sakai site id</td></tr>
+<tr><td>user</td><td><?=$euid?></td><td>LearnGuild enterprise id (eid)</td></tr>
+<tr><td>internaluser</td><td><?=$user?></td><td>LearnGuild internal id (userid)</td></tr>
+<tr><td>site</td><td><?=$site?></td><td>LearnGuild site id</td></tr>
 <tr><td>role</td><td><?=$role?></td><td>Role in the site</td></tr>
 <tr><td>sessionid</td><td><?=$sessionid?></td><td>Encrypted session id</td></tr>
 <tr><td>serverurl</td><td><?=$server?></td><td>URL of the calling server</td></tr>
 <tr><td>time</td><td><?=$time?></td><td>Time that script was invoked</td></tr>
-<tr><td>placement</td><td><?=$placement?></td><td>Sakai tool placement id (2.5 and later)</td></tr>
+<tr><td>placement</td><td><?=$placement?></td><td>LearnGuild tool placement id (2.5 and later)</td></tr>
 <tr><td>sign</td><td><?=$sign?></td><td>Linktool parameter signature</td></tr>
 </tbody>
 </table>
@@ -227,7 +227,8 @@ if ($server == "") {
 	}
 
 	if ($result == "not enabled") {
-		$msg = "The callback service is not enabled. Sakai 2.5 and later requires the sakai.properties setting <strong>linktool.enabled=true</strong>";
+//		$msg = "The callback service is not enabled. sakai 2.5 and later requires the sakai.properties setting <strong>linktool.enabled=true</strong>";
+		$msg = "The callback service is not enabled. It requires the properties setting <strong>linktool.enabled=true</strong>";
 	}
 
 	if ($result == "SOAP Error") {

@@ -2,7 +2,7 @@
 
 header('Content-type: text/html; charset=UTF-8') ;
 
-// Script for testing Sakai linktool getsession requests.
+// Script for testing LearnGuild linktool getsession requests.
 // This is https://source.sakaiproject.org/svn/linktool/trunk/samples/getsession.php
 
 // Requires PEAR SOAP module, and php modules curl, openssl, zlib (for installing PEAR modules if required)
@@ -168,7 +168,7 @@ body{
 <div class="portletBody">
 
 <h2>Linktool Test</h2>
-This script is to test the functionality of the Sakai LinkTool from QA and other servers.
+This script is to test the functionality of the LearnGuild LinkTool from QA and other servers.
 
 <h3>Linktool Parameters</h3>
 <table class="listHier" cellspacing="0" border="0" summary="Parameters">
