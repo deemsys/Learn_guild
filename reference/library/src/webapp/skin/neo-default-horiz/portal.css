@@ -7,6 +7,7 @@ body.portalBody {
     font-size: .8em;
     margin: 0;
     background-repeat: repeat-x;
+background-color:	#E0E0EB;//change
 }
  /* outer wrapper for portal content (decorative - child is #portalContainer )  */
 #portalOuterContainer {}
@@ -21,7 +22,9 @@ body.portalBody {
 #skipNav {}
 /* wrapper for site content (includes as children #toolMenuWrap,#content and #footer)  */
 #container {
-    background: #fff;
+    background:#E0E0EB;//change
+padding:50px;
+     
 }
 /* wrapper for #toolMenu - children are #worsiteLogo,#toolMenu  */
 #toolMenuWrap {
@@ -51,7 +54,12 @@ body.portalBody {
 /* second wrapper for content - needed by SAK-12563 */
 #innercontent {
     float: left;
-    width:100%
+    width:100%;
+background-color:white;
+padding:10px;
+//border:1px solid black;
+margin-bottom:50px; //change
+color:blue;
 }
 #col1of2 .portletTitleWrap, #col2of2 .portletTitleWrap {
     width: 98.5%;
@@ -76,8 +84,8 @@ body.portalBody {
     text-align: center;
     background: #f3f3f3;
     border: 1px solid #ddd;
-    width: 90%;
-    margin: 0 auto 50px auto;
+    width: 60%;
+    margin: 100px auto 50px auto;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -119,7 +127,7 @@ body.portalBody {
 }
 #headerMin {
     overflow: hidden;
-    height:120px;
+    height:70px;
 }
 
 /* outermost block containing mast head elements and site navigation. Block also has a class = site type name, in case you need to 
@@ -137,21 +145,28 @@ body.portalBody {
 #headerMin #mastHead {
     clear: both;
     display: block;
-    height: 120px;
-    background: #9e0000;
-    background: -moz-linear-gradient(top, #9e0000 0%, #a20000 26%, #980000 57%, #800000 93%, #7d0000 95%, #740300 98%, #740300 100%);
+    height: 70px;
+    background: #52527A;
+   /* background: -moz-linear-gradient(top, #9e0000 0%, #a20000 26%, #980000 57%, #800000 93%, #7d0000 95%, #740300 98%, #740300 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9e0000), color-stop(26%,#a20000), color-stop(57%,#980000), color-stop(93%,#800000), color-stop(95%,#7d0000), color-stop(98%,#740300), color-stop(100%,#740300));
     background: -webkit-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
     background: -o-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
     background: -ms-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: linear-gradient(to bottom, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
+    background: linear-gradient(to bottom, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);*/
 }
 /*mastHead smaller when logged in, to display logos, affiliation, but half the size */
 #headerMax #mastHead {
     clear: both;
     display: block;
-    height: 50px;
-    background: #cbbf8e
+    height: 55px;
+    background: #F0F0F5;/change for top
+  /*  background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e7e7e7));
+    background: -webkit-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+    background: -o-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+    background: -ms-linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);
+    background: linear-gradient(top, #f3f3f3 0%,#e7e7e7 100%);*/
+
 }
 
 /* container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
@@ -160,7 +175,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
     margin-top:5px;
     margin-left:0;
     width:150px;
-    height:120px;
+    height:70px;
 }
 /* show #mastHead and #mastLogo if the user is not logged in so that we can display the logo in the usual place (the logo
 in this skin is rendered via ul.topnav, which a anon user does not see)*/
@@ -196,7 +211,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 that can be used or hidden,can also use a background: url(images/<image name>.<ext>) in this block,or both superimposing them  */
 #mastBanner {
     width: 450px;
-    height: 100px;
+    height: 120px;
     float: left;
     margin-left: 0px;
     background-image: url(images/banner.png);
@@ -206,7 +221,7 @@ that can be used or hidden,can also use a background: url(images/<image name>.<e
 
 #headerMax #mastBanner {
     width: 450px;
-    height: 45px;
+    height: 60px;
     float: left;
     margin-left: 153px;
     background-image: url(images/banner_sm.png);
@@ -388,13 +403,13 @@ ul.nav-submenu li.submenuitem a, #mastLogin li.submenuitem a, #otherSiteTools li
     font-size: 100%;
     line-height: normal;
     padding: 0;
-    background: #9e0000;
-    background: -moz-linear-gradient(top, #9e0000 0%, #a20000 26%, #980000 57%, #800000 93%, #7d0000 95%, #740300 98%, #740300 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9e0000), color-stop(26%,#a20000), color-stop(57%,#980000), color-stop(93%,#800000), color-stop(95%,#7d0000), color-stop(98%,#740300), color-stop(100%,#740300));
-    background: -webkit-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: -o-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: -ms-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: linear-gradient(to bottom, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
+    background: #52527A; //change
+   background: -moz-linear-gradient(top, #52527A #5C5C8A 26%, #666699 57%, #7575A3 93%, #8585AD 95%, #9494B8 98%, #52527A 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#52527A), color-stop(26%,#5C5C8A), color-stop(57%,#980000), color-stop(93%,#7575A3), color-stop(95%,#8585AD), color-stop(98%,#9494B8), color-stop(100%,#A3A3c2));
+    background: -webkit-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#800000 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
+    background: -o-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
+    background: -ms-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#740300 98%,#52527A 100%);
+    background: linear-gradient(to bottom, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
 }
 /* wrapper for the site links, link to the 'more sites' tray, logout controls - children are #mastLogin and #linkNav*/
 #siteNav {}
@@ -807,7 +822,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     margin: 0;
     width: auto;
     padding: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #47476B;
     text-align: right;
     background: #f3f3f3;
     background: -moz-linear-gradient(top, #f3f3f3 0%, #e7e7e7 100%);
@@ -859,13 +874,14 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
 }
 #toolMenu li a:hover, #subSites li a:hover, #toolMenu li a:focus, #subSites li a:focus {
     text-decoration: none;
-    background: #9e0000;
-    background: -moz-linear-gradient(top, #9e0000 0%, #a20000 26%, #980000 57%, #800000 93%, #7d0000 95%, #740300 98%, #740300 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9e0000), color-stop(26%,#a20000), color-stop(57%,#980000), color-stop(93%,#800000), color-stop(95%,#7d0000), color-stop(98%,#740300), color-stop(100%,#740300));
-    background: -webkit-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: -o-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: -ms-linear-gradient(top, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
-    background: linear-gradient(to bottom, #9e0000 0%,#a20000 26%,#980000 57%,#800000 93%,#7d0000 95%,#740300 98%,#740300 100%);
+    background: #52527A; //Change for menu
+     background: -moz-linear-gradient(top, #52527A #5C5C8A 26%, #666699 57%, #7575A3 93%, #8585AD 95%, #9494B8 98%, #52527A 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#52527A), color-stop(26%,#5C5C8A), color-stop(57%,#980000), color-stop(93%,#7575A3), color-stop(95%,#8585AD), color-stop(98%,#9494B8), color-stop(100%,#A3A3c2));
+    background: -webkit-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#800000 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
+    background: -o-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
+    background: -ms-linear-gradient(top, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#740300 98%,#52527A 100%);
+    background: linear-gradient(to bottom, #52527A 0%,#5C5C8A 26%,#666699 57%,#7575A3 93%,#8585AD 95%,#9494B8 98%,#52527A 100%);
+
     color: #fff;
 }
 /* link in tool menu that allows adding one more tool, may be disabled */
@@ -981,7 +997,8 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     height: 1.5em;
     outline: none;
 }
-.portletTitle .title a:focus, .portletTitle .action a:focus {
+.portletTitle .
+ a:focus, .portletTitle .action a:focus {
     outline: black dotted thin
 }
 .portletTitle .action a:hover, .portletTitle .action a:focus {
@@ -1021,7 +1038,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     display: inline;
     margin: 0;
     padding: 0;
-    color: #444;
+    color: #333380;
     font-weight: bold;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.2em !important;
@@ -1045,6 +1062,7 @@ ul#otherSiteList li a span, ul.otherSitesCategorList li a span {
     height: auto;
     border: none;
     margin-top: 0;
+    background-color:#F0F0F5;//Change
 }
 /* PART 8 - FOOTER BLOCKS - descendants of #footer */
 /* wrapper for links going to external sites */
