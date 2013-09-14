@@ -455,8 +455,9 @@ public class ExternalLogicImpl implements ExternalLogic {
 			User user = null;
 			try {
 				user = userDirectoryService.getUserByEid(userEid);
-				replacementValues.put("localSakaiName",
-						developerHelperService.getConfigurationSetting("ui.service", "Sakai"));
+				//For Rebranding localSakaiName is changed to localLearnGuildName
+				//replacementValues.put("localSakaiName",developerHelperService.getConfigurationSetting("ui.service", "Sakai"));
+				replacementValues.put("localLearnGuildName",developerHelperService.getConfigurationSetting("ui.service", "LearnGuild"));
 				replacementValues.put("recipientFirstName",user.getFirstName());
 				replacementValues.put("pollQuestion", pollQuestion);
 				replacementValues.put("siteTitle", siteTitle); 
