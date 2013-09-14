@@ -382,8 +382,12 @@ public class ProfileWorksiteLogicImpl implements ProfileWorksiteLogic {
 		replacementValues.put("senderDisplayName", sakaiProxy.getUserDisplayName(ownerId));
 		replacementValues.put("worksiteTitle", siteTitle);
 		replacementValues.put("worksiteLink", siteUrl);
-		replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
-		replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		//For Rebranding localSakaiName is changed to localLearnGuildName 
+		//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+		replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
+		//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+		//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 		replacementValues.put("toolName", sakaiProxy.getCurrentToolTitle());
 		
 		sakaiProxy.sendEmail(member.getUuid(),
