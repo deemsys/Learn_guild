@@ -469,9 +469,13 @@ public class ProfileLogicImpl implements ProfileLogic {
 		//create the map of replacement values for this email template
 		Map<String,String> replacementValues = new HashMap<String,String>();
 		replacementValues.put("userDisplayName", sakaiProxy.getUserDisplayName(userUuid));
-		replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+		//For Rebranding localSakaiName is changed to localLearnGuildName 
+		//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+		replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
 		replacementValues.put("profileLink", linkLogic.getEntityLinkToProfileHome(userUuid));
-		replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+		//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 
 		sakaiProxy.sendEmail(userUuidTo, emailTemplateKey, replacementValues);
 		return;
