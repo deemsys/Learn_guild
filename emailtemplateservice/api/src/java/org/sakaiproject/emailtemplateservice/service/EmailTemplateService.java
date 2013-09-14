@@ -62,13 +62,15 @@ public interface EmailTemplateService {
    /**
     * Field for the local LMS name (e.g., CamTools, CTools, Vula)
     */
-   public static final String LOCAL_SAKAI_NAME="localSakaiName";
-   
-   /**
+   //For Rebranding localSakaiName is changed to localLearnGuildName 
+ //public static final String LOCAL_SAKAI_NAME="localSakaiName";
+   public static final String LOCAL_SAKAI_NAME="localLearnGuildName";
+      /**
     *  Field for the local LMS url
     */
-   public static final String LOCAL_SAKAI_URL="localSakaiURL";
-   
+ //For Rebranding localSakaiURL is changed to localLearnGuildURL 
+  // public static final String LOCAL_SAKAI_URL="localSakaiURL";
+   public static final String LOCAL_SAKAI_URL="localLearnGuildURL";
    /**
     *  Support email address
     */
