@@ -309,11 +309,14 @@ public class ProfileMessagingLogicImpl implements ProfileMessagingLogic {
 			//create the map of replacement values for this email template
 			Map<String,String> replacementValues = new HashMap<String,String>();
 			replacementValues.put("senderDisplayName", sakaiProxy.getUserDisplayName(fromUuid));
-			replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+			//For Rebranding localSakaiName is changed to localLearnGuildName 
+			//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+			replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
 			replacementValues.put("messageSubject", subject);
 			replacementValues.put("messageBody", messageStr);
 			replacementValues.put("messageLink", linkLogic.getEntityLinkToProfileMessages(directId));
-			replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+			//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+			replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 			replacementValues.put("toolName", sakaiProxy.getCurrentToolTitle());
 
 			sakaiProxy.sendEmail(toUuids, emailTemplateKey, replacementValues);
@@ -328,11 +331,15 @@ public class ProfileMessagingLogicImpl implements ProfileMessagingLogic {
 			//create the map of replacement values for this email template
 			Map<String,String> replacementValues = new HashMap<String,String>();
 			replacementValues.put("senderDisplayName", sakaiProxy.getUserDisplayName(fromUuid));
-			replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+			//For Rebranding localSakaiName is changed to localLearnGuildName 
+			//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+			replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
 			replacementValues.put("messageSubject", subject);
 			replacementValues.put("messageBody", messageStr);
 			replacementValues.put("messageLink", linkLogic.getEntityLinkToProfileMessages(directId));
-			replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+			//For Rebranding localSakaiUrl is changed to localLearnGuildUrl 
+			//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+			replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 			replacementValues.put("toolName", sakaiProxy.getCurrentToolTitle());
 
 			sakaiProxy.sendEmail(toUuids, emailTemplateKey, replacementValues);
