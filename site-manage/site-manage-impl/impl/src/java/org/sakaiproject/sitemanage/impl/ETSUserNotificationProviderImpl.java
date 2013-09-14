@@ -96,10 +96,14 @@ public class ETSUserNotificationProviderImpl implements UserNotificationProvider
 		// put placeholders for replacement values 
 		replacementValues.put("userName", "");
         replacementValues.put("userEid", "");
-        replacementValues.put("localSakaiName", "");
+       //For Rebranding localSakaiName is changed to localLearnGuildName 
+        //replacementValues.put("localSakaiName", "");
+        replacementValues.put("localLearnGuildName", "");
         replacementValues.put("currentUserName", "");
         replacementValues.put("currentUserDisplayName", "");
-        replacementValues.put("localSakaiURL", "");
+      //For Rebranding localSakaiURL is changed to localLearnGuildURL 
+        //replacementValues.put("localSakaiURL", "");
+        replacementValues.put("localLearnGuildURL", "");
         replacementValues.put("siteName", "");
         replacementValues.put("productionSiteName", "");
         replacementValues.put("newNonOfficialAccount", "false");
@@ -146,10 +150,15 @@ public class ETSUserNotificationProviderImpl implements UserNotificationProvider
 			 Map<String, String> replacementValues = new HashMap<String, String>();
 			 replacementValues.put("userName", user.getDisplayName());
 			 replacementValues.put("userEid", user.getEid());
-			 replacementValues.put("localSakaiName",serverConfigurationService.getString(
-	    				"ui.service", ""));
+			 //For Rebranding localSakaiName is changed to localLearnGuildName 
+			replacementValues.put("localLearnGuildName",serverConfigurationService.getString("ui.service", ""));
+	    	 //replacementValues.put("localSakaiName",serverConfigurationService.getString(
+	    	  //  				"ui.service", ""));
 			 replacementValues.put("currentUserName",userDirectoryService.getCurrentUser().getDisplayName());
-			 replacementValues.put("localSakaiUrl", serverConfigurationService.getPortalUrl());
+			//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+			 //replacementValues.put("localSakaiUrl", serverConfigurationService.getPortalUrl());
+			 
+			 replacementValues.put("localLearnGuildUrl", serverConfigurationService.getPortalUrl());
 			 String nonOfficialAccountUrl = serverConfigurationService.getString("nonOfficialAccount.url", null);
 			 replacementValues.put("hasNonOfficialAccountUrl", nonOfficialAccountUrl!=null?Boolean.TRUE.toString().toLowerCase():Boolean.FALSE.toString().toLowerCase());
 			 replacementValues.put("nonOfficialAccountUrl",nonOfficialAccountUrl);
@@ -187,10 +196,14 @@ public class ETSUserNotificationProviderImpl implements UserNotificationProvider
 			 */
 			Map<String, String> replacementValues = new HashMap<String, String>();
 			replacementValues.put("userName", user.getDisplayName());
-			replacementValues.put("localSakaiName",serverConfigurationService.getString("ui.service", ""));
+			// //For Rebranding localSakaiName is changed to localLearnGuildName 
+		// replacementValues.put("localSakaiName",serverConfigurationService.getString("ui.service", ""));
+			replacementValues.put("localLearnGuildName",serverConfigurationService.getString("ui.service", ""));
 			replacementValues.put("currentUserName",userDirectoryService.getCurrentUser().getDisplayName());
 			replacementValues.put("userEid", user.getEid());
-			replacementValues.put("localSakaiUrl", serverConfigurationService.getPortalUrl());
+			//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+			//replacementValues.put("localSakaiUrl", serverConfigurationService.getPortalUrl());
+			replacementValues.put("localLearnGuildUrl", serverConfigurationService.getPortalUrl());
 			replacementValues.put("newPassword",newUserPassword);
 			replacementValues.put("siteName", siteTitle);
 			replacementValues.put("productionSiteName", productionSiteName);
