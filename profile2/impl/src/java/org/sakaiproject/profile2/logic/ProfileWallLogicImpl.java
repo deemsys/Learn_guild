@@ -292,8 +292,12 @@ public class ProfileWallLogicImpl implements ProfileWallLogic {
 		Map<String, String> replacementValues = new HashMap<String, String>();
 		replacementValues.put("senderDisplayName", sakaiProxy.getUserDisplayName(fromUuid));
 		replacementValues.put("senderWallLink", linkLogic.getEntityLinkToProfileWall(fromUuid));
-		replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
-		replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		//For Rebranding localSakaiName is changed to localLearnGuildName 
+		//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+		replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
+		//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+		//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 		replacementValues.put("toolName", sakaiProxy.getCurrentToolTitle());
 		
 		String emailTemplateKey = null;
@@ -328,8 +332,12 @@ public class ProfileWallLogicImpl implements ProfileWallLogic {
 		// create the map of replacement values for this email template
 		Map<String, String> replacementValues = new HashMap<String, String>();
 		replacementValues.put("senderDisplayName", sakaiProxy.getUserDisplayName(fromUuid));
-		replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
-		replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		//For Rebranding localSakaiName is changed to localLearnGuildName 
+		//replacementValues.put("localSakaiName", sakaiProxy.getServiceName());
+		replacementValues.put("localLearnGuildName", sakaiProxy.getServiceName());
+		//For Rebranding localSakaiUrl is changed to localLearnGuildUrl
+		//replacementValues.put("localSakaiUrl", sakaiProxy.getPortalUrl());
+		replacementValues.put("localLearnGuildUrl", sakaiProxy.getPortalUrl());
 		replacementValues.put("toolName", sakaiProxy.getCurrentToolTitle());
 		
 		String emailTemplateKey = null;
