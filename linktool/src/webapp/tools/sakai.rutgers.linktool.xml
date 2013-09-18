@@ -7,7 +7,7 @@
 			title="Link Tool"
 			description="For linking to external applications.">
 
-		<configuration name="url" value="http://nightly2.sakaiproject.org/linktool/linktool.php" />
+		<configuration name="url" value="http://www.learnguild.com" />
 		<configuration name="height" value="800" />
                 <category name="course" />
                 <category name="project" />
