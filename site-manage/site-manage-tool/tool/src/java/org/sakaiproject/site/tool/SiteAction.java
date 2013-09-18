@@ -663,7 +663,7 @@ public class SiteAction extends PagedResourceActionII {
 	/** the news tool **/
 	private final static String NEWS_TOOL_ID = "sakai.news";
 	private final static String NEWS_TOOL_CHANNEL_CONFIG = "channel-url";
-	private final static String NEWS_TOOL_CHANNEL_CONFIG_VALUE = "http://sakaiproject.org/feed";
+	private final static String NEWS_TOOL_CHANNEL_CONFIG_VALUE = "http://timesofindia.feedsportal.com/c/33039/f/533923/index.rss";
 	
 	private final static int UUID_LENGTH = 36;
 	
