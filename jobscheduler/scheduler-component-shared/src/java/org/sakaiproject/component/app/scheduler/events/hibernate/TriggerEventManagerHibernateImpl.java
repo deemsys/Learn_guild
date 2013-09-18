@@ -30,8 +30,20 @@ public class TriggerEventManagerHibernateImpl
         TriggerEventHibernateImpl
             event = new TriggerEventHibernateImpl();
 
-        event.setEventType(type);
-        event.setJobName(jobName);
+        event.setEventType(type);      
+      
+        if(jobName.contains("org.sakaiproject"))
+        {
+        	int len = jobName.length();
+        	jobName.substring(17, len-1);
+        	
+        }   
+        else
+        {
+        	   event.setJobName(jobName);
+        } 
+     
+        
         event.setTriggerName(triggerName);
         event.setTime(time);
         event.setMessage(message);
