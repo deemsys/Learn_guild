@@ -55,7 +55,9 @@
 					<div class="indnt1">
 						#set ($pageTools = $page.Tools)
 						#foreach ($tool in $pageTools)
-							$tool.Tool.Id &nbsp;
+							#set($toolid_display=$tool.Tool.Id)
+						  #set( $temp_disp = $toolid_display.replace("sakai.", ""))
+						$validator.escapeHtml($temp_disp) &nbsp;
 						#end
 					</div>
 				</td>

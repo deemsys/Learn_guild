@@ -43,7 +43,9 @@
 						$validator.escapeHtml($tool.Id)
 					</a>
 				</td>
-				<td headers="Feature">$validator.escapeHtml($tool.Tool.Id)</td>
+				<td headers="Feature">#set($toolid_display=$tool.Tool.Id)
+						  #set( $temp_disp = $toolid_display.replace("sakai.", ""))
+						$validator.escapeHtml($temp_disp)</td>
 				<td headers="Title">$validator.escapeHtml($tool.Title)</td>
 				<td headers="Description">
 					<div>

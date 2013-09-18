@@ -25,7 +25,9 @@
 				<tr>
 					<th>$tlang.getString("siteditoo.tooid")</th>
 					<td>
-						$validator.escapeHtml($tool.Tool.Id)
+						#set($toolid_display=$tool.Tool.Id)
+						  #set( $temp_disp = $toolid_display.replace("sakai.", ""))
+						$validator.escapeHtml($temp_disp)
 					</td>
 				</tr>
 				<tr>
@@ -33,12 +35,17 @@
 						$tlang.getString("siteditoo.fea")
 					</th>
 					<td>
+					
+					
 						#foreach ($reg in $features)
 							<p class="checkbox">
 							<input type="radio" name="feature" id="feature$velocityCount" value="$reg.Id" #if($reg.Id==$tool.Tool.Id)checked="checked"#end
 									onclick="document.getElementById('thisOne').submit();" />
-							<label for="feature$velocityCount">$reg.Title ($reg.Id)</label>
-							</p>
+									#set($toolid_new=$reg.Id)
+									#set( $b = $toolid_new.replace("sakai.", ""))
+							<label for="feature$velocityCount">$reg.Title ($b)</label>								
+																	
+					</p>
 						#end							
 					</td>
 				</tr>
