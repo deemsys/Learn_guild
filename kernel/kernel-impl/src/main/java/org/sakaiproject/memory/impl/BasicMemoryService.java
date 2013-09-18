@@ -266,7 +266,17 @@ public abstract class BasicMemoryService implements MemoryService, Observer
 			final long misses = cache.getStatistics().getCacheMisses();
 			final long total = hits + misses;
 			final long hitRatio = ((total > 0) ? ((100l * hits) / total) : 0);
-			buf.append(cache.getName() + ": " + 
+			String cachestr=cache.getName();
+			String removestr="org.sakaiproject.";
+			String cachesub=cachestr.substring(0, 17);
+			if(cachesub.equalsIgnoreCase(removestr))
+			{
+			cachestr=cachestr.substring(17);
+			cachestr=cachestr.replace("SAKAI", "");
+			
+			}
+			cachestr=cachestr.replace("sakai", "");
+			buf.append( cachestr + ": " + 
 					" count:" + cache.getStatistics().getObjectCount() +
 					" hits:" + hits +
 					" misses:" + misses + 
@@ -277,7 +287,17 @@ public abstract class BasicMemoryService implements MemoryService, Observer
 		// extended report
 		buf.append("\n** Extended Cache Report\n");
 		for (Object ehcache : allCaches) {
-			buf.append(ehcache.toString());
+			String ehcachestr=ehcache.toString();
+			String ehcachesub=ehcachestr.substring(9,26);
+			String ehremovestr="org.sakaiproject.";
+			if(ehcachesub.equalsIgnoreCase(ehremovestr))
+			{
+				ehcachestr=ehcachestr.replace(ehremovestr,"");
+				ehcachestr=ehcachestr.replace("SAKAI", "");
+				
+			}	
+			ehcachestr=ehcachestr.replace("sakai", "");
+			buf.append(ehcachestr);
 			buf.append("\n");
 		}
 		
