@@ -544,7 +544,7 @@ public class LinkTool extends HttpServlet
       out.println("</span>");
       out.println("<h3>Session Access</h3>");
       out.println("<div class=\"instruction\">");
-      out.println("<p>This section allows you to request a cryptographically signed object that can be used to request access to a Sakai session ID. Session IDs are needed to access most of the web services.</p>");
+      out.println("<p>This section allows you to request a cryptographically signed object that can be used to request access to a LearnGuild session ID. Session IDs are needed to access most of the web services.</p>");
       
       // Session s = SessionManager.getCurrentSession();
       //       String userid = null;
@@ -567,7 +567,7 @@ public class LinkTool extends HttpServlet
          
          out.println("</div>");
          out.println("<form method=\"post\" action=\"" + oururl + "?SignForm\">");
-         out.println("<p class=\"shorttext\"><label for=\"user\">Specific user</label><input id=\"user\" type=\"text\" name=\"user\" size=\"30\"/> [an internal Sakai userid, not the Enterprise ID]</p>");
+         out.println("<p class=\"shorttext\"><label for=\"user\">Specific user</label><input id=\"user\" type=\"text\" name=\"user\" size=\"30\"/> [an internal  LearnGuild userid, not the Enterprise ID]</p>");
          out.println("<p class=\"shorttext\"><label for=\"currentuser\">The current user</label><input id=\"currentuser\" type=\"checkbox\" name=\"current\" value=\"yes\"/></p>");
          out.println("<p class=\"act\"><input type=\"submit\" value=\"Generate Signed Object\"/></p>");
          out.println("</form>");
